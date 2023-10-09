@@ -1,0 +1,164 @@
+#1
+
+# filename = input("Enter your file name")
+
+# try:
+#     with open(filename, "r") as file:
+#         for i in range(10):
+#             print(file.readline())
+# except FileNotFoundError:
+#         print("FilNotFoundError")
+
+#2
+
+# filename = input("Enter your file name")
+
+# try:
+#     with open(filename, "r") as file:
+#         file = file.read()
+#         file = file.split("\n")
+#         print(file[-10:])
+# except FileNotFoundError:
+#         print("FilNotFoundError")
+
+#3
+
+# filename1 = input("Enter your file1 name")
+# filename2 = input("Enter your file2 name")
+
+# try:
+#     with open(filename2, "r") as file2:
+#         file2 = file2.read()
+#         with open(filename1, "a") as file:
+#             file = file.write(file2)
+#         with open(filename1, "r") as file3:
+#             file3 = file3.read()
+#             print(file3)
+# except FileNotFoundError:
+#         print("FilNotFoundError")
+
+#4
+
+     
+# filename = input("Enter your file")
+
+# try:
+#     with open(filename, "r") as file:
+#         count = 0
+#         for i in file.readlines():
+#             i = i.replace("\n", " ")
+#             count += 1
+#             print(f"{count}:  {i}")
+# except FileNotFoundError:
+#     print("FileNotFoundError")
+
+#5
+
+# try: 
+#     filename = input("Enter your file") 
+
+#     with open(filename, "r") as file:
+#         file = file.readlines()
+#         count = 1
+#         maxwords = ""
+#         for i in file:
+#             if len(i) > count:
+#                 count = len(i)
+#                 maxwords = i
+#             elif len(i) == count:
+#                 maxwords += i 
+#         print(f"\nLen:{count}\n\n{maxwords}")
+# except FileNotFoundError:
+#     print("FilNotFoundError")
+
+# #6
+
+# filename = input("Enter your file")
+
+# mydict = {
+
+# }
+
+# try:
+#     with open(filename, "r") as file:
+#         file = file.read()
+#         file = file.upper()
+#         for i in file:
+#             if i.isalpha() == True:
+#                 count = 0
+#                 if i in mydict:
+#                     mydict[i] += 1
+#                 else:
+#                     mydict[i] = 1
+#     print(mydict)
+
+# except FileNotFoundError:
+#     print("FileNotFoundError")
+
+#6
+
+# summ = 0
+# number = input("Enter number")
+
+# while str(number) != "":
+#     try:
+#             summ += float(number)
+#             print("\nDzer sum@", summ, "\n")
+#             number = input("Enter number")
+            
+#     except ValueError:
+#         print("\nNormal gri\n")
+#         number = input("Enter number")
+
+#7
+
+# def new_func():
+#     mydict = {
+#     "A":"4",
+#     "A-":"3.7",
+#     "B+":"3.3",
+#     "B":"3",
+#     "B-":"2.7",
+#     "C+":"2.3",
+#     "C":"2",
+#     "C-":"1.7",
+#     "D+":"1.3",
+#     "D":"1",
+#     "D-":"0.7",
+#     "F":"0"
+# }
+
+#     x = input("Enter point").upper()
+
+#     while x != "":
+#         if x in mydict.values() or x in mydict.keys():
+#                 if x in mydict.values(): #and x in mydict.values() or x in mydict.keys()
+#                         for k, v in mydict.items():
+#                             if str(x) == str(v):
+#                                 print(f"Your pointt is {k}")
+#                         x = input("Enter point").upper()
+#                 else:
+#                         for k, v in mydict.items():
+#                             if str(x) == k:
+#                                 print(f"Your pointt is {v}")
+#                         x = input("Enter point").upper()
+#         else:
+#             print("False input, try again")
+#             return new_func()
+        
+# new_func()
+
+#8
+
+# try:
+#     filename = input("Enter your file")
+#     tfilename = input("Enter other file")
+
+#     with open(filename, 'r') as file, open(tfilename, 'w') as tfile:
+#         for i in file:
+#             newline = i.split('#', 1)[0]
+#             tfile.write(newline + '\n')
+# except FileNotFoundError:
+#     print("FileNotFoundError")
+  
+            
